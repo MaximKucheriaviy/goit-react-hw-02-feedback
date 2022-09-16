@@ -22,5 +22,10 @@ export default class FeedbackOptions extends Component{
 }
 
 FeedbackOptions.propTypes = {
-    onLeaveFeedback: PropTypes.func
+    onLeaveFeedback: PropTypes.func,
+    options: PropTypes.shape({
+        good: PropTypes.arrayOf(PropTypes.number),
+        neutral: PropTypes.arrayOf(PropTypes.number),
+        bad: PropTypes.arrayOf(PropTypes.number)
+    })
 }
