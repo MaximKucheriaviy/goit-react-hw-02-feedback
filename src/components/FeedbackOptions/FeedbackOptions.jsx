@@ -1,9 +1,12 @@
 import { Component } from "react";
 import PropTypes from "prop-types";
+import { ButtonList } from "./FeedbackOptions.styled"
+
+
 export default class FeedbackOptions extends Component{
     render(){
         return(
-            <ul>
+            <ButtonList>
                 <li>
                     <button type="button" onClick={(event) => {this.props.onLeaveFeedback(this.props.options.good)}}>Good</button>
                 </li>
@@ -13,7 +16,7 @@ export default class FeedbackOptions extends Component{
                 <li>
                     <button type="button" onClick={(event) => {this.props.onLeaveFeedback(this.props.options.bad)}}>Bad</button>
                 </li>
-            </ul>
+            </ButtonList>
         )
     }
 }
